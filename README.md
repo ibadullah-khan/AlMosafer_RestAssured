@@ -3,8 +3,10 @@
 **Framework Overview**
 Framwork is based on Rest Assured, TestNG, Maven (for Build Management) and Allure Report (for Reporting)
 
-Two APIs have been taken
+Two APIs have been taken,
+
 GET: /api/enigma/hotel/lookup
+
 POST: /api/v3/flights/flight/get-fares-calender
 
 Some highlighted concepts that have been used,
