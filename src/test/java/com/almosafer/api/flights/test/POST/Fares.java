@@ -1,6 +1,7 @@
 package com.almosafer.api.flights.test.POST;
 
 import com.almosafer.api.BaseTest;
+import com.almosafer.api.constants.Endpoints;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -38,7 +39,7 @@ public class Fares extends BaseTest {
     @Description("Test Description : Verify that data is returned for the flight")
     void getFaresCalenderAndVerify()
     {
-        RestAssured.basePath = "/api/v3/flights/flight/get-fares-calender";
+        RestAssured.basePath = Endpoints.GET_FARES_CALENDER;
 
         String today = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
         Calendar c = Calendar.getInstance();

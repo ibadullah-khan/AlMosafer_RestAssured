@@ -1,6 +1,8 @@
 package com.almosafer.api.hotel.test.GET;
 
 import com.almosafer.api.BaseTest;
+import com.almosafer.api.constants.Endpoints;
+import com.almosafer.api.utils.ConfigManager;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
@@ -14,8 +16,8 @@ public class LookUps extends BaseTest {
     static RequestSpecification commonSpecs()
     {
         RequestSpecBuilder builder = new RequestSpecBuilder();
-        builder.setBasePath("/api/enigma/hotel/lookup");
-        builder.addHeader("token","83jso87u3#762726#$113j");
+        builder.setBasePath(Endpoints.HOTEL_LOOKUP);
+        builder.addHeader("token", ConfigManager.getInstance().gettoken());
 
         RequestSpecification specification = builder.build();
         return specification;
@@ -35,5 +37,6 @@ public class LookUps extends BaseTest {
                 .statusLine("HTTP/1.1 200 OK")
                 .body(is(notNullValue()));
     }
+
 
 }

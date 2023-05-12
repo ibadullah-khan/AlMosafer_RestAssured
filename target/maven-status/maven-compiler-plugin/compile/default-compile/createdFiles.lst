@@ -1,3 +1,2 @@
-com\almosafer\api\hotel\test\GET\LookUps.class
-com\almosafer\api\BaseTest.class
-com\almosafer\api\flights\test\POST\Fares.class
+com\almosafer\api\constants\Endpoints.class
+com\almosafer\api\utils\ConfigManager.class
